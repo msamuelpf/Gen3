@@ -1,0 +1,83 @@
+Don't calculate stack size in tree,,,,,,,,,
+#,Caller Functions,Function,Callee Functions,,Attribute,Address,Size,Stack Size,Source
+1,,_SR_CommLevelManager ( 4 ),,{} ,------,0x5b9  ,50,4,Communications.obj
+2,,_stkinit ( 0 ),,As ,------,0x1bd  ,0,0,stkinit.obj
+3,,_hdwinit ( 0 ),,As ,------,0x1bc  ,0,0,hdwinit.obj
+4,,_INTER_TickTmr ( 8 ),,{} ,-I----,0x132  ,47,8,Drv_TmrInterrupt00.obj
+5,,_FN_u16DISPLAY_MUX_4 ( 4 ),,{} ,------,0x94c  ,127,4,Display.obj
+6,,_FN_u16DISPLAY_MUX_3 ( 4 ),,{} ,------,0x8d3  ,121,4,Display.obj
+7,,_FN_u16DISPLAY_MUX_2 ( 8 ),,{} ,------,0x84d  ,134,8,Display.obj
+8,,_FN_u16DISPLAY_MUX_1 ( 8 ),,{} ,------,0x7c7  ,134,8,Display.obj
+9,,_main ( 4 ),_SR_Init_mcu ( 4 ) | _SR_InitRam ( 4 ) | _SR_EnableHardware ( 4 ) | _SR_SerialComm ( 4 ) | _SR_MProcess ( 4 ) | _SR_BuzzerTest ( 4 ) | _SR_Buzzer ( 8 ) | _SR_HardwareRefresh ( 4 ),{} ,------,0xfc2  ,76,4,Main.obj
+10,_main ( 4 ),_SR_Init_mcu ( 4 ),_SR_PortConfig ( 4 ) | _SR_SetClk ( 4 ) | _SR_InitTmr0 ( 4 ) | _SR_InitADC ( 4 ) | _SR_InitUART1 ( 4 ),{} ,------,0xf6c  ,22,4,InitMCU.obj
+11,_SR_Init_mcu ( 4 ),_SR_PortConfig ( 4 ),_SR_InitPorts ( 4 ),{} ,------,0xef5  ,46,4,Hardware.obj
+12,_SR_PortConfig ( 4 ),_SR_InitPorts ( 4 ),,{} ,------,0xf23  ,65,4,Hardware.obj
+13,_SR_Init_mcu ( 4 ),_SR_SetClk ( 4 ),,{} ,------,0xf92  ,31,4,InitMCU.obj
+14,_SR_Init_mcu ( 4 ),_SR_InitTmr0 ( 4 ),_SR_ConfigTmrInterrupt00 ( 4 ) | _SR_ConfigTmrInterrupt03 ( 4 ) | _SR_ConfigTmrPwm07 ( 4 ),{} ,------,0xc85  ,30,4,Drv_Tmr0.obj
+15,_SR_InitTmr0 ( 4 ),_SR_ConfigTmrInterrupt00 ( 4 ),,{} ,------,0xcaf  ,51,4,Drv_TmrInterrupt00.obj
+16,_SR_InitTmr0 ( 4 ),_SR_ConfigTmrInterrupt03 ( 4 ),,{} ,------,0xcf2  ,54,4,Drv_TmrInterrupt03.obj
+17,_SR_InitTmr0 ( 4 ),_SR_ConfigTmrPwm07 ( 4 ),,{} ,------,0xd57  ,106,4,Drv_TmrPwm07.obj
+18,_SR_Init_mcu ( 4 ),_SR_InitADC ( 4 ),,{} ,------,0xc46  ,44,4,Drv_Adc.obj
+19,_SR_Init_mcu ( 4 ),_SR_InitUART1 ( 4 ),_SR_ConfigUart1Tx ( 4 ) | _SR_ConfigUart1Rx ( 4 ),{} ,------,0xe0a  ,13,4,Drv_UART1.obj
+20,_SR_InitUART1 ( 4 ),_SR_ConfigUart1Tx ( 4 ),,{} ,------,0xe17  ,60,4,Drv_UART1.obj
+21,_SR_InitUART1 ( 4 ),_SR_ConfigUart1Rx ( 4 ),,{} ,------,0xe53  ,62,4,Drv_UART1.obj
+22,_main ( 4 ),_SR_InitRam ( 4 ),_SR_InitBtnFilter ( 4 ),{} ,------,0x1054  ,68,4,RAM.obj
+23,_SR_InitRam ( 4 ),_SR_InitBtnFilter ( 4 ),,{} ,------,0xaed  ,16,4,Display.obj
+24,_main ( 4 ),_SR_EnableHardware ( 4 ),_SR_EnableWDT ( 4 ) | _SR_EnableTmr0Functions ( 4 ) | _SR_EnableADC ( 4 ) | _SR_EnableUart1Rx ( 4 ),{} ,------,0xf82  ,15,4,InitMCU.obj
+25,_SR_EnableHardware ( 4 ),_SR_EnableWDT ( 4 ),,{} ,------,0xfb1  ,17,4,InitMCU.obj
+26,_SR_EnableHardware ( 4 ),_SR_EnableTmr0Functions ( 4 ),_SR_EnableTmrInterrupt00 ( 4 ) | _SR_EnableTmrInterrupt03 ( 4 ) | _SR_EnableTmrInterrupt07 ( 4 ),{} ,------,0xca3  ,12,4,Drv_Tmr0.obj
+27,_SR_EnableTmr0Functions ( 4 ),_SR_EnableTmrInterrupt00 ( 4 ),,{} ,------,0xce2  ,16,4,Drv_TmrInterrupt00.obj
+28,_SR_EnableTmr0Functions ( 4 ) | _SR_Buzzer ( 8 ),_SR_EnableTmrInterrupt03 ( 4 ),,{} ,------,0xd28  ,18,4,Drv_TmrInterrupt03.obj
+29,_SR_EnableTmr0Functions ( 4 ),_SR_EnableTmrInterrupt07 ( 4 ),,{} ,------,0xdc1  ,18,4,Drv_TmrPwm07.obj
+30,_SR_EnableHardware ( 4 ),_SR_EnableADC ( 4 ),,{} ,------,0xc72  ,12,4,Drv_Adc.obj
+31,_SR_EnableHardware ( 4 ) | _INTER_UART1_Tx ( 14 ),_SR_EnableUart1Rx ( 4 ),,{} ,------,0xeb1  ,22,4,Drv_UART1.obj
+32,_main ( 4 ),_SR_SerialComm ( 4 ),_FN_u8FrameReceivedStatus ( 4 ) | _SR_DisableUart1Rx ( 4 ) | _SR_GetFrame ( 4 ) | _SR_SlaveDeviceManager ( 4 ) | _SR_CommandManager ( 4 ) | _SR_SetFrame ( 4 ) | _SR_EnableUart1Tx ( 4 ),{} ,------,0x3f5  ,77,4,Communications.obj
+33,_SR_SerialComm ( 4 ),_FN_u8FrameReceivedStatus ( 4 ),_FN_CalcCRC ( 10 ),{} ,------,0x600  ,24,4,Communications.obj
+34,_FN_u8FrameReceivedStatus ( 4 ) | _SR_SetFrame ( 4 ),_FN_CalcCRC ( 10 ),,{} ,------,0x19be  ,59,10,crc.obj
+35,_SR_SerialComm ( 4 ),_SR_DisableUart1Rx ( 4 ),,{} ,------,0xedf  ,22,4,Drv_UART1.obj
+36,_SR_SerialComm ( 4 ),_SR_GetFrame ( 4 ),_SR_GetTestEquipmentFrame ( 4 ) | _SR_GetDisplayFrame ( 4 ),{} ,------,0x618  ,32,4,Communications.obj
+37,_SR_GetFrame ( 4 ),_SR_GetTestEquipmentFrame ( 4 ),,{} ,------,0x6b1  ,13,4,Communications.obj
+38,_SR_GetFrame ( 4 ),_SR_GetDisplayFrame ( 4 ),_SR_PlayMusic ( 4 ),{} ,------,0x638  ,121,4,Communications.obj
+39,_SR_GetDisplayFrame ( 4 ) | _SR_InitState ( 4 ) | _SR_FCT_TestDigital ( 4 ) | _SR_FCT_Test ( 4 ) | _SR_FCT_TestHybrid ( 4 ) | _SR_ALT_Test ( 4 ) | _SR_BuzzerTest ( 4 ),_SR_PlayMusic ( 4 ),,{} ,------,0x3da  ,11,4,Buzzer.obj
+40,_SR_SerialComm ( 4 ),_SR_SlaveDeviceManager ( 4 ),,{} ,------,0x5a9  ,16,4,Communications.obj
+41,_SR_SerialComm ( 4 ),_SR_CommandManager ( 4 ),_SR_TestEquipmentCommandManager ( 4 ) | _SR_DisplayCommandManager ( 4 ),{} ,------,0x589  ,10,4,Communications.obj
+42,_SR_CommandManager ( 4 ),_SR_TestEquipmentCommandManager ( 4 ),,{} ,------,0x593  ,7,4,Communications.obj
+43,_SR_CommandManager ( 4 ),_SR_DisplayCommandManager ( 4 ),,{} ,------,0x59a  ,15,4,Communications.obj
+44,_SR_SerialComm ( 4 ),_SR_SetFrame ( 4 ),_SR_SetDisplayFrame ( 4 ) | _SR_SetTestEquipmentFrame ( 4 ) | _FN_CalcCRC ( 10 ),{} ,------,0x442  ,51,4,Communications.obj
+45,_SR_SetFrame ( 4 ),_SR_SetDisplayFrame ( 4 ),,{} ,------,0x475  ,148,4,Communications.obj
+46,_SR_SetFrame ( 4 ),_SR_SetTestEquipmentFrame ( 4 ),,{} ,------,0x509  ,128,4,Communications.obj
+47,_SR_SerialComm ( 4 ),_SR_EnableUart1Tx ( 4 ),,{} ,------,0xe91  ,32,4,Drv_UART1.obj
+48,_main ( 4 ),_SR_MProcess ( 4 ),_SR_InitState ( 4 ) | _SR_FCT_Test ( 4 ) | _SR_UserInterfaceTest ( 4 ) | _SR_ALT_Test ( 4 ),{} ,------,0x102f  ,37,4,MainProcess.obj
+49,_SR_MProcess ( 4 ),_SR_InitState ( 4 ),_SR_PlayMusic ( 4 ),{} ,------,0x100e  ,32,4,MainProcess.obj
+50,_SR_MProcess ( 4 ),_SR_FCT_Test ( 4 ),_SR_FCT_TestDigital ( 4 ) | _SR_PlayMusic ( 4 ) | _SR_FCT_TestHybrid ( 4 ),{} ,------,0x1098  ,185,4,Test.obj
+51,_SR_FCT_Test ( 4 ),_SR_FCT_TestDigital ( 4 ),_SR_PlayMusic ( 4 ),{} ,------,0x1473  ,838,4,Test.obj
+52,_SR_FCT_Test ( 4 ),_SR_FCT_TestHybrid ( 4 ),_SR_PlayMusic ( 4 ),{} ,------,0x1151  ,802,4,Test.obj
+53,_SR_MProcess ( 4 ),_SR_UserInterfaceTest ( 4 ),,{} ,------,0x17b9  ,1,4,Test.obj
+54,_SR_MProcess ( 4 ),_SR_ALT_Test ( 4 ),_SR_PlayMusic ( 4 ),{} ,------,0x17ba  ,516,4,Test.obj
+55,_main ( 4 ),_SR_BuzzerTest ( 4 ),_SR_PlayMusic ( 4 ),{} ,------,0x3e5  ,16,4,Buzzer.obj
+56,_main ( 4 ),_SR_Buzzer ( 8 ),_SR_DisableTmrInterrupt03 ( 4 ) | _SRE_BuzzerDriverSetVolumeDutty ( 4 ) | _SRE_BuzzerDriverSetToneFrequency ( 4 ) | _SR_EnableTmrInterrupt03 ( 4 ) | __COM_uidiv ( 0 ),{} ,------,0x201  ,473,8,Buzzer.obj
+57,_SR_Buzzer ( 8 ),_SR_DisableTmrInterrupt03 ( 4 ),,{} ,------,0xd3a  ,26,4,Drv_TmrInterrupt03.obj
+58,_SR_Buzzer ( 8 ),_SRE_BuzzerDriverSetVolumeDutty ( 4 ),__COM_lmul ( 4 ) | __COM_uldiv ( 4 ),{} ,------,0xde5  ,37,4,Drv_TmrPwm07.obj
+59,_SRE_BuzzerDriverSetVolumeDutty ( 4 ),__COM_lmul ( 4 ),,{} ,------,0x19f9  ,0,4,_COM_lmul.obj
+60,_SRE_BuzzerDriverSetVolumeDutty ( 4 ),__COM_uldiv ( 4 ),,{} ,------,0x1a50  ,0,4,_COM_uldiv.obj
+61,_SR_Buzzer ( 8 ),_SRE_BuzzerDriverSetToneFrequency ( 4 ),,{} ,------,0xd54  ,3,4,Drv_TmrInterrupt03.obj
+62,_SR_Buzzer ( 8 ),__COM_uidiv ( 0 ),,As ,----R-,0x1a23  ,0,0,_COM_uidiv.obj
+63,_main ( 4 ),_SR_HardwareRefresh ( 4 ),_SR_GetCycle ( 4 ) | _SR_RefreshDisplay ( 4 ),{} ,------,0xf64  ,8,4,Hardware.obj
+64,_SR_HardwareRefresh ( 4 ),_SR_GetCycle ( 4 ),_FN_u8GetADC ( 4 ) | _FN_u8GetKnobPosition ( 4 ),{} ,------,0x6be  ,49,4,CycleSelector.obj
+65,_SR_GetCycle ( 4 ),_FN_u8GetADC ( 4 ),,{} ,------,0xc82  ,3,4,Drv_Adc.obj
+66,_SR_GetCycle ( 4 ),_FN_u8GetKnobPosition ( 4 ),,{} ,------,0x6ef  ,19,4,CycleSelector.obj
+67,_SR_HardwareRefresh ( 4 ),_SR_RefreshDisplay ( 4 ),_FN_u16DISPLAY_MUX_4_Centauro ( 6 ) | _FN_u16DISPLAY_MUX_1_Centauro ( 4 ) | _FN_u16DISPLAY_MUX_2_Centauro ( 4 ) | _FN_u16DISPLAY_MUX_3_Centauro ( 4 ) | _SR_ReadBtn ( 4 ),{} ,------,0x702  ,197,4,Display.obj
+68,_SR_RefreshDisplay ( 4 ),_FN_u16DISPLAY_MUX_4_Centauro ( 6 ),,{} ,------,0xbf5  ,81,6,Display.obj
+69,_SR_RefreshDisplay ( 4 ),_FN_u16DISPLAY_MUX_1_Centauro ( 4 ),,{} ,------,0xafd  ,73,4,Display.obj
+70,_SR_RefreshDisplay ( 4 ),_FN_u16DISPLAY_MUX_2_Centauro ( 4 ),,{} ,------,0xb46  ,84,4,Display.obj
+71,_SR_RefreshDisplay ( 4 ),_FN_u16DISPLAY_MUX_3_Centauro ( 4 ),,{} ,------,0xb9a  ,91,4,Display.obj
+72,_SR_RefreshDisplay ( 4 ),_SR_ReadBtn ( 4 ),_SR_DigitalBtnFilter ( 10 ),{} ,------,0x9cb  ,233,4,Display.obj
+73,_SR_ReadBtn ( 4 ),_SR_DigitalBtnFilter ( 10 ),,{} ,------,0xab4  ,57,10,Display.obj
+74,,_SR_DisableADC ( 4 ),,{} ,------,0xc7e  ,4,4,Drv_Adc.obj
+75,,_SR_OperationMode ( 4 ),,{} ,------,0x102e  ,1,4,MainProcess.obj
+76,,_FN_u8CalculateChecksum ( 4 ),,{} ,------,0x5eb  ,21,4,Communications.obj
+77,,_SR_FlashChecksum ( 4 ),,{} ,------,0xf91  ,1,4,InitMCU.obj
+78,,_INTER_UART1_Rx ( 8 ),,{} ,-I----,0x198  ,36,8,Drv_UART1.obj
+79,,_INTER_UART1_Tx ( 14 ),_SR_DisableUart1Tx ( 4 ) | _SR_EnableUart1Rx ( 4 ),{} ,-I----,0x161  ,55,14,Drv_UART1.obj
+80,_INTER_UART1_Tx ( 14 ),_SR_DisableUart1Tx ( 4 ),,{} ,------,0xec7  ,24,4,Drv_UART1.obj
+81,,_SR_DisableTmrInterrupt07 ( 4 ),,{} ,------,0xdd3  ,18,4,Drv_TmrPwm07.obj

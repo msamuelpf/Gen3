@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Test/GEA2/iodefineRX210.h&apos;" deleteContents="false" description="Delete resource &apos;Test/GEA2/iodefineRX210.h&apos;" element1="/Test/GEA2/iodefineRX210.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1628780796555"/>
+</session>

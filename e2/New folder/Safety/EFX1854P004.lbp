@@ -1,0 +1,138 @@
+Renesas Optimizing Linker (V2.01.00 )             23-Sep-2020 12:46:35
+
+*** Options ***
+
+-subcommand=LinkerEFX1854P004.tmp
+-noprelink
+-input=".\SourceMabe/SafetyAlgorithms\MCU_SelfTest.obj"
+-input=".\SourceMabe/SafetyAlgorithms\SafetyAlgorithms.obj"
+-input=".\SourceMabe/SafetyDevices\Adc.obj"
+-input=".\SourceMabe/SafetyDevices\ArcSensor.obj"
+-input=".\SourceMabe/SafetyDevices\BuzzerDriver.obj"
+-input=".\SourceMabe/SafetyDevices\DTC.obj"
+-input=".\SourceMabe/SafetyDevices\DataFlash.obj"
+-input=".\SourceMabe/SafetyDevices\LidLock.obj"
+-input=".\SourceMabe/SafetyDevices\LidSwitch.obj"
+-input=".\SourceMabe/SafetyDevices\ModeShifter.obj"
+-input=".\SourceMabe/SafetyDevices\Motor.obj"
+-input=".\SourceMabe/SafetyDevices\PressureSensor.obj"
+-input=".\SourceMabe/SafetyDevices\Refresh.obj"
+-input=".\SourceMabe/SafetyDevices\SafetyRelay.obj"
+-input=".\SourceMabe/SafetyDevices\SafetyTriac.obj"
+-input=".\SourceMabe/SafetyDevices\Safety_UI.obj"
+-input=".\SourceMabe/SafetyDevices\Shifter.obj"
+-input=".\SourceMabe/SafetyDevices\SpeedSensor.obj"
+-input=".\SourceMabe/SafetyDevices\ThermalShifter.obj"
+-input=".\SourceMabe/SafetyDevices\ZeroCrossSensor.obj"
+-input=".\SourceMabe/SafetyDevices\cpu.obj"
+-input=".\SourceMabe/SafetyLink\interrupt_handlers.obj"
+-input=".\SourceMabe/SoftwareDevices\SafetyCRC.obj"
+-input=".\SourceMabe/SoftwareDevices\SafetyDigitalFilter.obj"
+-input=".\SourceRenesas/ADC12\test_adc12.obj"
+-input=".\SourceRenesas/CPU\cpu_test.obj"
+-input=".\SourceRenesas/CPU\cpu_test_coupling.obj"
+-input=".\SourceRenesas/Clock\clock_monitor.obj"
+-input=".\SourceRenesas/DataFlash\locking.obj"
+-input=".\SourceRenesas/DataFlash\mcu_locks.obj"
+-input=".\SourceRenesas/DataFlash\r_flash_api_rx.obj"
+-input=".\SourceRenesas/RAM\ramtest_march_HW.obj"
+-input=".\SourceRenesas/RAM\ramtest_march_c_HW.obj"
+-input=".\SourceRenesas/RAM\ramtest_stack.obj"
+-input=".\SourceRenesas/ROM\CRC_Verify.obj"
+-input=".\SourceRenesas/ROM\crc.obj"
+-input=".\SourceRenesas/Voltage\voltage.obj"
+-output="EFX1854P004.lib"
+-form=library=u
+-nomessage
+-list=EFX1854P004.lbp
+
+*** Error information ***
+
+*** Library Information ***
+
+LIBRARY NAME=EFX1854P004.lib
+CPU=RX
+ENDIAN=Little
+ATTRIBUTE=user
+NUMBER OF MODULE=37
+
+*** Library List ***
+
+MODULE    LAST UPDATE
+  SECTION
+    SYMBOL
+
+MCU_SelfTest
+          23-Sep-2020 12:46:20
+SafetyAlgorithms
+          23-Sep-2020 12:46:21
+Adc
+          23-Sep-2020 12:46:20
+ArcSensor
+          23-Sep-2020 12:46:20
+BuzzerDriver
+          23-Sep-2020 12:46:23
+DTC
+          23-Sep-2020 12:46:23
+DataFlash
+          23-Sep-2020 12:46:23
+LidLock
+          23-Sep-2020 12:46:24
+LidSwitch
+          23-Sep-2020 12:46:25
+ModeShifter
+          23-Sep-2020 12:46:25
+Motor
+          23-Sep-2020 12:46:25
+PressureSensor
+          23-Sep-2020 12:46:26
+Refresh
+          23-Sep-2020 12:46:27
+SafetyRelay
+          23-Sep-2020 12:46:27
+SafetyTriac
+          23-Sep-2020 12:46:28
+Safety_UI
+          23-Sep-2020 12:46:28
+Shifter
+          23-Sep-2020 12:46:29
+SpeedSensor
+          23-Sep-2020 12:46:29
+ThermalShifter
+          23-Sep-2020 12:46:30
+ZeroCrossSensor
+          23-Sep-2020 12:46:30
+cpu
+          23-Sep-2020 12:46:31
+interrupt_handlers
+          23-Sep-2020 12:46:31
+SafetyCRC
+          23-Sep-2020 12:46:13
+SafetyDigitalFilter
+          23-Sep-2020 12:46:13
+test_adc12
+          23-Sep-2020 12:46:13
+cpu_test
+          23-Sep-2020 12:46:16
+cpu_test_coupling
+          23-Sep-2020 12:46:16
+clock_monitor
+          23-Sep-2020 12:46:15
+locking
+          23-Sep-2020 12:46:32
+mcu_locks
+          23-Sep-2020 12:46:32
+r_flash_api_rx
+          23-Sep-2020 12:46:33
+ramtest_march_HW
+          23-Sep-2020 12:46:16
+ramtest_march_c_HW
+          23-Sep-2020 12:46:18
+ramtest_stack
+          23-Sep-2020 12:46:18
+CRC_Verify
+          23-Sep-2020 12:46:18
+crc
+          23-Sep-2020 12:46:18
+voltage
+          23-Sep-2020 12:46:13

@@ -1,0 +1,6 @@
+-MAKEUD=D:\e2\Test\HardwareDebug\\Test_c.ud
+-form=stype
+-output="Test.mot"
+-byte_count=10
+-nomessage
+-nologo

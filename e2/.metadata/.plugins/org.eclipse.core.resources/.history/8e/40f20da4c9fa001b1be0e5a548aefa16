@@ -1,0 +1,9 @@
+-MM
+-MP
+-cpu=S2 
+-dev="C:/Users/LDCMEXDI/.eclipse/com.renesas.platform_1401425906/DebugComp/RL78/RL78/Common/DR5F100FH.DVF"
+-I "C:\e2_studio\RL78\1_10_0\inc"
+-I "D:\e2\Test\generate" 
+-character_set=utf8
+-lang=c
+-g

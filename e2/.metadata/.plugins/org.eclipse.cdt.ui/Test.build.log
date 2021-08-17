@@ -1,0 +1,64 @@
+08:46:17 **** Incremental Build of configuration HardwareDebug for project Test ****
+make -j4 all 
+'Invoking: Linker'
+LinkerTest.tmp=
+    -MAKEUD=D:\e2\Test\HardwareDebug/Test_l.ud
+    -device="C:/Users/LDCMEXDI/.eclipse/com.renesas.platform_1401425906/DebugComp/RL78/RL78/Common/DR5F100FH.DVF"
+    -list="Test.map"
+    -nooptimize
+    -entry=_start
+    -auto_section_layout
+    -security_id=0
+    -debug_monitor=2FE00-2FFFF
+    -input=".\generate\cstart.obj"
+    -input=".\generate\hdwinit.obj"
+    -input=".\generate\stkinit.obj"
+    -input=".\Source\Buzzer.obj"
+    -input=".\Source\Communications.obj"
+    -input=".\Source\CycleSelector.obj"
+    -input=".\Source\Display.obj"
+    -input=".\Source\Drv_Adc.obj"
+    -input=".\Source\Drv_Tmr0.obj"
+    -input=".\Source\Drv_TmrInterrupt00.obj"
+    -input=".\Source\Drv_TmrInterrupt03.obj"
+    -input=".\Source\Drv_TmrPwm07.obj"
+    -input=".\Source\Drv_UART1.obj"
+    -input=".\Source\Hardware.obj"
+    -input=".\Source\InitMCU.obj"
+    -input=".\Source\Main.obj"
+    -input=".\Source\MainProcess.obj"
+    -input=".\Source\RAM.obj"
+    -input=".\Source\Tablas.obj"
+    -input=".\Source\Test.obj"
+    -input=".\Source\crc.obj"
+    -library="C:\e2_studio\RL78\1_10_0\lib\rl78cm4s99.lib"
+    -library="C:\e2_studio\RL78\1_10_0\lib\rl78cm4r.lib"
+    -library="C:\e2_studio\RL78\1_10_0\lib\malloc_n.lib"
+    -output="Test.abs"
+    -debug
+    -nocompress
+    -rom=.data=.dataR,.sdata=.sdataR
+    -stack
+    -nomessage
+    -nologo
+rlink -subcommand="LinkerTest.tmp"
+
+W0561016:The evaluation version is valid for the remaining 54 days
+
+W0561321:Entry symbol "_T_HARDWARE_ID" in ".\Source\Communications.obj" conflicts
+W0561321:Entry symbol "_T_DISPLAY_VAL" in ".\Source\Communications.obj" conflicts
+W0561321:Entry symbol "_T_SW_PART_NUMBER" in ".\Source\Communications.obj" conflicts
+W0561321:Entry symbol "_T_GROUP_NO" in ".\Source\Communications.obj" conflicts
+W0561321:Entry symbol "_T_REVISION_NO" in ".\Source\Communications.obj" conflicts
+W0561321:Entry symbol "_T_DISPLAY_VAL" in ".\Source\Test.obj" conflicts
+W0561520:"user option byte" in ".option_byte" created by device file
+W0561520:"on chip debug" in ".option_byte" created by device file
+E0562310:Undefined external symbol "___NOP" referenced in ".\Source\Drv_UART1.obj"
+
+Renesas Optimizing Linker Abort
+makefile:105: recipe for target 'Test.abs' failed
+make: *** [Test.abs] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+08:46:22 Build Failed. 3 errors, 9 warnings. (took 5s.72ms)
+
